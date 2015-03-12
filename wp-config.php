@@ -7,10 +7,15 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	include( dirname( __FILE__ ) . '/local-config.php' );
 } else {
 	define( 'WP_LOCAL_DEV', false );
-	define( 'DB_NAME', '%%DB_NAME%%' );
-	define( 'DB_USER', '%%DB_USER%%' );
-	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
-	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+  /** The name of the database for WordPress */
+  define('DB_NAME', $_SERVER["RDS_DB_NAME"]);
+  /** MySQL database username */
+  define('DB_USER', $_SERVER["RDS_USERNAME"]);
+  /** MySQL database password */
+  define('DB_PASSWORD', $_SERVER["RDS_PASSWORD"]);
+  /** MySQL hostname */
+  define('DB_HOST', $_SERVER["RDS_HOSTNAME"]);  
+	
 }
 
 // ========================
