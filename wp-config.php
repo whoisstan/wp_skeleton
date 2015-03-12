@@ -14,8 +14,8 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
   /** MySQL database password */
   define('DB_PASSWORD', $_SERVER["RDS_PASSWORD"]);
   /** MySQL hostname */
-  define('DB_HOST', $_SERVER["RDS_HOSTNAME"]);  
-	
+  define('DB_HOST', $_SERVER["RDS_HOSTNAME"]);
+
 }
 
 // ========================
@@ -58,8 +58,8 @@ define( 'WPLANG', '' );
 // ===========
 // Hide errors
 // ===========
-ini_set( 'display_errors', 0 );
-define( 'WP_DEBUG_DISPLAY', false );
+ini_set( 'display_errors', 1 );
+define( 'WP_DEBUG_DISPLAY', true );
 
 // =================================================================
 // Debug mode
